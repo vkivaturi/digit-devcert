@@ -4,9 +4,10 @@ package digit.web.controllers;
 import digit.web.models.DeathRegistrationRequest;
 import digit.web.models.DeathRegistrationResponse;
 import digit.web.models.ErrorRes;
-import digit.web.models.RequestInfo;
-    import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import io.swagger.annotations.*;
+
+import org.egov.common.contract.request.RequestInfo;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

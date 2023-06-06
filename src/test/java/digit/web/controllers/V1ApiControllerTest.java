@@ -3,7 +3,6 @@ package digit.web.controllers;
 import digit.web.models.DeathRegistrationRequest;
 import digit.web.models.DeathRegistrationResponse;
 import digit.web.models.ErrorRes;
-import digit.web.models.RequestInfo;
 import org.junit.Test;
 import org.junit.Ignore;
 import org.junit.runner.RunWith;

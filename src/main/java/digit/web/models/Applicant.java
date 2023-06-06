@@ -7,6 +7,7 @@ import digit.web.models.Role;
 import digit.web.models.User;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 import org.springframework.validation.annotation.Validated;
@@ -23,7 +24,7 @@ import lombok.Builder;
  */
 @ApiModel(description = "Details of the user applying for death registration")
 @Validated
-@javax.annotation.Generated(value = "org.egov.codegen.SpringBootCodegen", date = "2023-06-04T14:11:41.668+05:30")
+@javax.annotation.Generated(value = "org.egov.codegen.SpringBootCodegen", date = "2022-08-16T15:34:24.436+05:30")
 
 @Getter
 @Setter
@@ -31,23 +32,11 @@ import lombok.Builder;
 @NoArgsConstructor
 @Builder
 public class Applicant   {
-        @JsonProperty("tenantId")
-        private String tenantId = null;
-
         @JsonProperty("id")
-        private Integer id = null;
-
-        @JsonProperty("uuid")
-        private String uuid = null;
+        private String id = null;
 
         @JsonProperty("userName")
         private String userName = null;
-
-        @JsonProperty("userType")
-        private String userType = null;
-
-        @JsonProperty("gender")
-        private String gender = null;
 
         @JsonProperty("password")
         private String password = null;
@@ -55,11 +44,11 @@ public class Applicant   {
         @JsonProperty("salutation")
         private String salutation = null;
 
-        @JsonProperty("pan")
-        private String pan = null;
+        @JsonProperty("name")
+        private String name = null;
 
-        @JsonProperty("aadhaarNumber")
-        private String aadhaarNumber = null;
+        @JsonProperty("gender")
+        private String gender = null;
 
         @JsonProperty("mobileNumber")
         private String mobileNumber = null;
@@ -67,9 +56,14 @@ public class Applicant   {
         @JsonProperty("emailId")
         private String emailId = null;
 
-        @JsonProperty("roles")
-        @Valid
-        private List<Role> roles = new ArrayList<>();
+        @JsonProperty("altContactNumber")
+        private String altContactNumber = null;
+
+        @JsonProperty("pan")
+        private String pan = null;
+
+        @JsonProperty("aadhaarNumber")
+        private String aadhaarNumber = null;
 
         @JsonProperty("permanentAddress")
         private String permanentAddress = null;
@@ -80,14 +74,29 @@ public class Applicant   {
         @JsonProperty("permanentPincode")
         private String permanentPincode = null;
 
+        @JsonProperty("correspondenceCity")
+        private String correspondenceCity = null;
+
         @JsonProperty("correspondencePincode")
         private String correspondencePincode = null;
+
+        @JsonProperty("correspondenceAddress")
+        private String correspondenceAddress = null;
 
         @JsonProperty("active")
         private Boolean active = null;
 
+        @JsonProperty("dob")
+        private LocalDate dob = null;
+
+        @JsonProperty("pwdExpiryDate")
+        private LocalDate pwdExpiryDate = null;
+
         @JsonProperty("locale")
         private String locale = null;
+
+        @JsonProperty("type")
+        private String type = null;
 
         @JsonProperty("signature")
         private String signature = null;
@@ -95,8 +104,12 @@ public class Applicant   {
         @JsonProperty("accountLocked")
         private Boolean accountLocked = null;
 
-        @JsonProperty("fatherOrSpouseName")
-        private String fatherOrSpouseName = null;
+        @JsonProperty("roles")
+        @Valid
+        private List<Role> roles = null;
+
+        @JsonProperty("fatherOrHusbandName")
+        private String fatherOrHusbandName = null;
 
         @JsonProperty("bloodGroup")
         private String bloodGroup = null;
@@ -107,11 +120,31 @@ public class Applicant   {
         @JsonProperty("photo")
         private String photo = null;
 
+        @JsonProperty("createdBy")
+        private Long createdBy = null;
+
+        @JsonProperty("createdDate")
+        private LocalDate createdDate = null;
+
+        @JsonProperty("lastModifiedBy")
+        private Long lastModifiedBy = null;
+
+        @JsonProperty("lastModifiedDate")
+        private LocalDate lastModifiedDate = null;
+
+        @JsonProperty("otpReference")
+        private String otpReference = null;
+
+        @JsonProperty("tenantId")
+        private String tenantId = null;
+
 
         public Applicant addRolesItem(Role rolesItem) {
+            if (this.roles == null) {
+            this.roles = new ArrayList<>();
+            }
         this.roles.add(rolesItem);
         return this;
         }
 
 }
-

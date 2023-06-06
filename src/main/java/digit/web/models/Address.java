@@ -59,7 +59,9 @@ public class Address   {
 
         @JsonProperty("detail")
         private String detail = null;
-
+        
+        @JsonProperty("registrationId")
+        private String registrationId = null;
 
 }
 
